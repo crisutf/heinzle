@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #ffffff;
+    --color-text: #000000;
+    --color-card: #ffffff;
+    --color-border: #e5e7eb;
+    --color-muted: #6b7280;
+    --color-btn: #000000;
+    --color-btn-text: #ffffff;
+    --color-accent: #4ade80;
+  }
+
+  .dark {
+    --color-bg: #000000;
+    --color-text: #ffffff;
+    --color-card: #111111;
+    --color-border: #262626;
+    --color-muted: #a3a3a3;
+    --color-btn: #86efac;
+    --color-btn-text: #000000;
+    --color-accent: #86efac;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans antialiased bg-[var(--color-bg)] text-[var(--color-text)] transition-colors duration-500;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[var(--color-accent)] rounded-full;
+  }
+}
+
+@layer components {
+  .snap-section {
+    @apply flex flex-col;
+  }
+}
