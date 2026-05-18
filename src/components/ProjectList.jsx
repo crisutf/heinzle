@@ -6,10 +6,10 @@ const projects = [
     {
         id: 1,
         name: 'Project 1',
-        description: 'Try.',
-        longDescription: 'longDescription.',
+        description: 'INFO LOCKED.',
+        longDescription: 'INFO NOT AVAILABLE.',
         url: '#',
-        tags: ['Tag 1', 'Tag 2'],
+        tags: [':D'],
         icon: <Navigation size={24} />,
         color: 'text-[var(--color-text)]',
         bg: 'bg-[var(--color-border)]/30'
