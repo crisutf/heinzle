@@ -5,9 +5,9 @@ import { Github, Navigation, ExternalLink, X, AlertTriangle } from 'lucide-react
 const projects = [
     {
         id: 1,
-        name: 'Proyecto 1',
-        description: 'Descripción corta de tu proyecto.',
-        longDescription: 'Descripción detallada de tu proyecto aquí.',
+        name: 'Project 1',
+        description: 'Try.',
+        longDescription: 'longDescription.',
         url: '#',
         tags: ['Tag 1', 'Tag 2'],
         icon: <Navigation size={24} />,
@@ -37,7 +37,7 @@ const ProjectList = () => {
                 viewport={{ once: true }}
                 className="text-3xl md:text-4xl font-semibold mb-16 text-center text-[var(--color-text)] tracking-tight"
             >
-                Mis Proyectos
+                My Projects
             </motion.h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -153,7 +153,7 @@ const ProjectList = () => {
                                                 className={`flex-1 flex items-center justify-center gap-3 px-6 py-3 ${selectedProject.modalBg ? 'bg-white text-black' : 'bg-[var(--color-btn)] text-[var(--color-btn-text)]'} rounded-xl font-medium hover:opacity-90 transition-colors`}
                                             >
                                                 <Github size={20} />
-                                                Repositorio
+                                                Repository
                                             </a>
                                             {selectedProject.demoUrl && (
                                                 <a 
@@ -163,7 +163,7 @@ const ProjectList = () => {
                                                     className={`flex-1 flex items-center justify-center gap-3 px-6 py-3 ${selectedProject.modalBg ? 'bg-white/10 text-white border border-white/20' : 'bg-[var(--color-card)] text-[var(--color-text)] border border-[var(--color-border)]'} rounded-xl font-medium hover:opacity-90 transition-colors`}
                                                 >
                                                     <ExternalLink size={20} />
-                                                    Ir a la web
+                                                    Go to the web
                                                 </a>
                                             )}
                                         </div>
