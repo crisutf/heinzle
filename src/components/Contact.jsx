@@ -21,7 +21,7 @@ const Contact = () => {
                     
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <motion.a
-                            href="mailto:tuemail@ejemplo.com"
+                            href="mailto:projectheinzle@gmail.com"
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                             className="flex items-center gap-3 px-8 py-3.5 bg-[var(--color-btn)] text-[var(--color-btn-text)] rounded-xl font-medium hover:opacity-90 transition-colors w-full sm:w-auto justify-center"
