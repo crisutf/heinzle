@@ -13,10 +13,10 @@ const Contact = () => {
             >
                 <div className="max-w-3xl mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-semibold mb-8 text-[var(--color-text)] tracking-tight">
-                        ¿Alguna pregunta?
+                        ¿Do you have a question?
                     </h2>
                     <p className="text-[var(--color-muted)] mb-10 text-lg font-light">
-                        Siéntete libre de contactarme para cualquier consulta o propuesta.
+                        Contact Me!
                     </p>
                     
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -27,7 +27,7 @@ const Contact = () => {
                             className="flex items-center gap-3 px-8 py-3.5 bg-[var(--color-btn)] text-[var(--color-btn-text)] rounded-xl font-medium hover:opacity-90 transition-colors w-full sm:w-auto justify-center"
                         >
                             <Mail size={20} />
-                            tuemail@ejemplo.com
+                            projectheinzle@gmail.com
                         </motion.a>
                     </div>
                 </div>
