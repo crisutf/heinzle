@@ -38,7 +38,7 @@ const Hero = () => {
                             href="#proyectos" 
                             className="px-6 py-2.5 bg-[var(--color-btn)] text-[var(--color-btn-text)] rounded-full font-medium hover:opacity-90 transition-colors shadow-sm"
                         >
-                            Ver Proyectos
+                            View Projects
                         </a>
                         <a 
                             href="https://github.com/ProjectHeinzle" 
