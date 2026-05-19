@@ -27,7 +27,7 @@ const AboutMe = () => {
                         Who am I?
                     </h3>
                     <p className="text-[var(--color-muted)] leading-relaxed">
-                        A computer scientist who enjoys experimenting and sharing his findings.
+                        An amateur computer enthusiast who enjoys experimenting with electronics, modifying them, and sharing his discoveries.
 
                     </p>
                 </motion.div>
