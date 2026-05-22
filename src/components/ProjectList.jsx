@@ -37,7 +37,7 @@ const ProjectList = () => {
                 viewport={{ once: true }}
                 className="text-3xl md:text-4xl font-semibold mb-16 text-center text-[var(--color-text)] tracking-tight"
             >
-                My Projects
+                My Projects/Discoveries
             </motion.h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
