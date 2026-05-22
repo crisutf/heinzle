@@ -9,7 +9,7 @@ const projects = [
         description: 'INFO LOCKED.',
         longDescription: 'INFO NOT AVAILABLE.',
         url: '#',
-        tags: [':D'],
+        tags: [],
         icon: <Navigation size={24} />,
         color: 'text-[var(--color-text)]',
         bg: 'bg-[var(--color-border)]/30'
