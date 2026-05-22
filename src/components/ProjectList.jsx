@@ -1,18 +1,115 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Github, Navigation, ExternalLink, X, AlertTriangle } from 'lucide-react';
+import { Github, Navigation, ExternalLink, X, AlertTriangle, Download, HardDrive, Cpu, Settings, FolderSearch, PenTool, Eraser, Activity, Info } from 'lucide-react';
 
 const projects = [
     {
         id: 1,
-        name: 'Project 1',
-        description: 'INFO LOCKED.',
-        longDescription: 'INFO NOT AVAILABLE.',
-        url: '#',
-        tags: [],
-        icon: <Navigation size={24} />,
-        color: 'text-[var(--color-text)]',
-        bg: 'bg-[var(--color-border)]/30'
+        name: 'SSD Tweaker Portable',
+        description: 'Optimize your SSD for better performance.',
+        longDescription: 'SSD Tweaker is a tool designed to optimize and adjust your solid-state drive (SSD) settings in Windows, helping to extend its lifespan and improve system performance.',
+        url: 'https://github.com/projectheinzle/SSDTweakerPortable',
+        downloadUrl: 'https://github.com/projectheinzle/SSDTweakerPortable/archive/refs/heads/main.zip',
+        tags: ['Optimization', 'SSD', 'Portable'],
+        icon: <HardDrive size={24} />,
+        color: 'text-blue-500',
+        bg: 'bg-blue-500/10'
+    },
+    {
+        id: 2,
+        name: 'SpaceSniffer Portable',
+        description: 'Visualize hard drive space usage.',
+        longDescription: 'SpaceSniffer is a disk space visualization tool that allows you to understand how files and folders are structured on your drives using a treemap.',
+        url: 'https://github.com/projectheinzle/SpacesnifferPortable',
+        downloadUrl: 'https://github.com/projectheinzle/SpacesnifferPortable/archive/refs/heads/main.zip',
+        tags: ['Disk', 'Visualization', 'Portable'],
+        icon: <FolderSearch size={24} />,
+        color: 'text-amber-500',
+        bg: 'bg-amber-500/10'
+    },
+    {
+        id: 3,
+        name: 'Rufus Portable',
+        description: 'Create bootable USB drives easily.',
+        longDescription: 'Rufus is a utility that helps format and create bootable USB flash drives, such as USB keys/pendrives, memory sticks, etc.',
+        url: 'https://github.com/projectheinzle/RufusPortable',
+        downloadUrl: 'https://github.com/projectheinzle/RufusPortable/archive/refs/heads/main.zip',
+        tags: ['USB', 'Boot', 'Portable'],
+        icon: <Settings size={24} />,
+        color: 'text-zinc-500',
+        bg: 'bg-zinc-500/10'
+    },
+    {
+        id: 4,
+        name: 'MiniTool Partition Wizard Portable',
+        description: 'Professional disk partition manager.',
+        longDescription: 'One of the best tools for managing hard drive partitions, allowing you to resize, clone, and recover partitions safely.',
+        url: 'https://github.com/projectheinzle/MiniToolPartitionWizardPortable',
+        downloadUrl: 'https://github.com/projectheinzle/MiniToolPartitionWizardPortable/archive/refs/heads/main.zip',
+        tags: ['Partitions', 'Disk', 'Portable'],
+        icon: <PenTool size={24} />,
+        color: 'text-blue-600',
+        bg: 'bg-blue-600/10'
+    },
+    {
+        id: 5,
+        name: 'FAT32 Format Portable',
+        description: 'Format large drives to FAT32.',
+        longDescription: 'A simple and effective tool to format disk drives larger than 32GB to the FAT32 file system, something Windows does not allow natively.',
+        url: 'https://github.com/projectheinzle/FAT32FormatPortable',
+        downloadUrl: 'https://github.com/projectheinzle/FAT32FormatPortable/archive/refs/heads/main.zip',
+        tags: ['Format', 'FAT32', 'Portable'],
+        icon: <Eraser size={24} />,
+        color: 'text-green-500',
+        bg: 'bg-green-500/10'
+    },
+    {
+        id: 6,
+        name: 'Dism++ Portable',
+        description: 'Advanced Windows cleaning and optimization.',
+        longDescription: 'Dism++ is a graphical interface for DISM that allows you to perform deep system cleanups, manage drivers, and optimize Windows easily.',
+        url: 'https://github.com/projectheinzle/Dism-Portable',
+        downloadUrl: 'https://github.com/projectheinzle/Dism-Portable/archive/refs/heads/main.zip',
+        tags: ['System', 'Optimization', 'Portable'],
+        icon: <Settings size={24} />,
+        color: 'text-cyan-500',
+        bg: 'bg-cyan-500/10'
+    },
+    {
+        id: 7,
+        name: 'Defraggler Portable',
+        description: 'Lightweight and powerful disk defragmenter.',
+        longDescription: 'Defraggler allows you to defragment entire hard drives or individual files, improving data access times.',
+        url: 'https://github.com/projectheinzle/DefragglerPortable',
+        downloadUrl: 'https://github.com/projectheinzle/DefragglerPortable/archive/refs/heads/main.zip',
+        tags: ['Disk', 'Defrag', 'Portable'],
+        icon: <Activity size={24} />,
+        color: 'text-purple-500',
+        bg: 'bg-purple-500/10'
+    },
+    {
+        id: 8,
+        name: 'CrystalDiskMark Portable',
+        description: 'Performance benchmark for your disks.',
+        longDescription: 'CrystalDiskMark is a benchmark utility that measures sequential and random read/write speeds for your storage drives.',
+        url: 'https://github.com/projectheinzle/CrystalDiskMarkPortable',
+        downloadUrl: 'https://github.com/projectheinzle/CrystalDiskMarkPortable/archive/refs/heads/main.zip',
+        tags: ['Benchmark', 'Performance', 'Portable'],
+        icon: <Cpu size={24} />,
+        color: 'text-red-500',
+        bg: 'bg-red-500/10'
+    },
+    {
+        id: 9,
+        name: 'CrystalDiskInfo Portable',
+        description: 'Monitor your hard drive health.',
+        longDescription: 'Essential tool for monitoring the health status and temperature of your HDD/SSD drives, detecting potential failures before they happen.',
+        url: 'https://github.com/projectheinzle/CrystalDiskInfoPortable',
+        downloadUrl: 'https://github.com/projectheinzle/CrystalDiskInfoPortable/archive/refs/heads/main.zip',
+        tags: ['Health', 'Monitoring', 'Portable'],
+        icon: <Info size={24} />,
+        color: 'text-indigo-500',
+        bg: 'bg-indigo-500/10'
     }
 ];
 
@@ -155,6 +252,15 @@ const ProjectList = () => {
                                                 <Github size={20} />
                                                 Repository
                                             </a>
+                                            {selectedProject.downloadUrl && (
+                                                <a 
+                                                    href={selectedProject.downloadUrl}
+                                                    className={`flex-1 flex items-center justify-center gap-3 px-6 py-3 ${selectedProject.modalBg ? 'bg-white/10 text-white border border-white/20' : 'bg-[var(--color-card)] text-[var(--color-text)] border border-[var(--color-border)]'} rounded-xl font-medium hover:opacity-90 transition-colors`}
+                                                >
+                                                    <Download size={20} />
+                                                    Download
+                                                </a>
+                                            )}
                                             {selectedProject.demoUrl && (
                                                 <a 
                                                     href={selectedProject.demoUrl}

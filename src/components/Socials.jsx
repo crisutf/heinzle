@@ -1,10 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Instagram } from 'lucide-react';
+import { Github } from 'lucide-react';
 
 const socialLinks = [
     { id: 1, name: 'GitHub', icon: <Github size={22} />, url: 'https://github.com/ProjectHeinzle', color: 'hover:text-[var(--color-text)]' },
-    { id: 2, name: 'Instagram', icon: <Instagram size={22} />, url: '#', color: 'hover:text-pink-500' },
 ];
 
 const Socials = () => {
