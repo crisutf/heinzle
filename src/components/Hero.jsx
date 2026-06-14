@@ -11,7 +11,7 @@ const Hero = () => {
             >
                 <div className="w-[300px] h-[300px] rounded-3xl overflow-hidden ring-4 ring-[var(--color-border)] shadow-lg mx-auto bg-[var(--color-bg)]">
                     <img
-                        src="https://cdn.crisu.qzz.io/heinzle/P.svg"
+                        src="https://cdn.crisu.qzz.io/files/svg/heinzle/P.svg"
                         alt="ProjectHeinzle Logo"
                         className="w-full h-full object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
                     />
